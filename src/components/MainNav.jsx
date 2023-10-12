@@ -91,7 +91,7 @@ export default function MainNav() {
 
     // Mobile sidebar JSX.
     const sideBar = (
-        <div className="relative h-screen">
+        <div className="relative h-screen bg-white py-12">
             <div className="px-12 flex items-center gap-3">
                 <button
                     className="btn-primary-outline w-full py-2"
@@ -120,11 +120,12 @@ export default function MainNav() {
     );
 
     return (
-        <nav className="w-full max-container py-8">
+        <nav className="w-full max-container py-3">
             <div className="hidden lg:block">{lgNav}</div>
             <div className="lg:hidden">{smNav}</div>
             <div
-                className={`lg:hidden py-12 fixed top-0 w-[75%] bg-white duration-700 ${open ? 'right-0' : '-right-[100rem]'}`}
+                className={`lg:hidden fixed top-0 z-50 w-[75%] duration-1000 
+                ${open ? 'right-0' : '-right-[100rem]'}`}
             >
                 <OutSideClick
                     show={open}
