@@ -29,8 +29,12 @@
     @apply outline-none duration-200 bg-gray-700 hover:bg-gray-600 text-white text-xl md:text-2xl font-semibold rounded-full click-effect
 }
 
+/* Shapes */
+.trapezoid {
+    @apply w-full md:w-[50rem] border-solid border-b-[4.5rem] border-b-primary border-x-[6rem] border-x-transparent
+}
 
 /* test class */
 .test {
-    color: #ff6546;
+    color: #00000034;
 }

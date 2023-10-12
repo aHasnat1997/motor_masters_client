@@ -20,7 +20,7 @@ export default function ServiceCard({ image, title, price }) {
             <h3 className="text-2xl font-semibold mt-8">{title}</h3>
             <div className="mt-2 text-primary flex justify-between">
                 <h4 className="text-xl">Price : ${price}</h4>
-                <button className="text-4xl px-4 duration-300 hover:translate-x-3">
+                <button className="text-4xl px-4 duration-300 hover:translate-x-3 click-effect">
                     <AiOutlineArrowRight />
                 </button>
             </div>
