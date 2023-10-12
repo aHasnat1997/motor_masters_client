@@ -15,7 +15,7 @@ export default function ProductsCard({ image, title, price, ratting }) {
                 <img
                     src={image}
                     alt="product-image"
-                    className="w-full h-80 duration-700 group-hover:scale-110"
+                    className="w-full h-60 md:h-80 duration-700 group-hover:scale-110"
                 />
             </div>
             <div className="mt-8 flex flex-col items-center gap-4">

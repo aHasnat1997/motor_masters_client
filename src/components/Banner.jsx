@@ -16,7 +16,7 @@ export default function Banner({ image, title, route }) {
             backgroundAttachment: 'fixed',
             position: 'relative',
         }}
-            className="h-[40vh] md:h-[65vh] shadow-2xl"
+            className="h-[30rem] md:h-[40rem] shadow-2xl"
         >
             <div className="max-container h-full flex items-center">
                 <h1 className="text-white text-4xl md:text-7xl font-semibold">{title}</h1>

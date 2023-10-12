@@ -14,7 +14,7 @@ export default function ServiceCard({ image, title, price }) {
                 <img
                     src={image}
                     alt="service-image"
-                    className="w-full h-80 duration-700 group-hover:scale-110"
+                    className="w-full h-60 md:h-80 duration-700 group-hover:scale-110"
                 />
             </div>
             <h3 className="text-2xl font-semibold mt-8">{title}</h3>
