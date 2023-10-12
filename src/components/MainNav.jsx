@@ -136,7 +136,7 @@ export default function MainNav() {
             <div className="hidden lg:block">{lgNav}</div>
             <div className="lg:hidden">{smNav}</div>
             <div
-                className={`lg:hidden py-12 fixed top-0 w-[75%] bg-white duration-700 ${open ? 'right-0' : '-right-96'}`}
+                className={`lg:hidden py-12 fixed top-0 w-[75%] bg-white duration-700 ${open ? 'right-0' : '-right-[100rem]'}`}
             >
                 <OutSideClick
                     show={open}
