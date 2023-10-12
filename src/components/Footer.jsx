@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
 import { BsGoogle, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 import React from 'react';
+import Logo from './Logo';
 
 /**
  * Footer component for the website.
@@ -74,11 +74,7 @@ export default function Footer() {
         <footer className="bg-gray-800 w-full">
             <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16'>
                 <div className='w-80 flex flex-col gap-12'>
-                    <img
-                        src={logo}
-                        alt="logo"
-                        className="w-full lg:w-48"
-                    />
+                    <Logo />
                     <p className='text-xl'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
                     <div className='flex items-center gap-8 text-2xl'>
                         <div className='p-3 bg-white/20 rounded-full'><BsGoogle /></div>
