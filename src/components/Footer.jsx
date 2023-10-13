@@ -5,6 +5,7 @@ import Logo from './Logo';
 
 /**
  * Footer component for the website.
+ * @returns {JSX.Element} Footer.
  */
 export default function Footer() {
     // Array containing footer navigation data.
@@ -65,42 +66,53 @@ export default function Footer() {
      * @returns {JSX.Element} - The list item JSX.
      */
     const listItems = (name, path) => {
-        return <li className='text-xl'>
+        return <li className='text-xl group'>
             <Link to={path}>{name}</Link>
+            <div className='w-full h-1 bg-white duration-700 origin-left scale-x-0 group-hover:scale-x-100' />
         </li>;
     };
 
     return (
         <footer className="bg-gray-800 w-full">
             <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16'>
-                <div className='w-80 flex flex-col gap-12'>
-                    <Logo />
+                <div className='w-80 flex flex-col items-center gap-12'>
+                    <Logo position='footer' />
                     <p className='text-xl'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
                     <div className='flex items-center gap-8 text-2xl'>
-                        <div className='p-3 bg-white/20 rounded-full'><BsGoogle /></div>
-                        <div className='p-3 bg-white/20 rounded-full'><BsTwitter /></div>
-                        <div className='p-3 bg-white/20 rounded-full'><BsInstagram /></div>
-                        <div className='p-3 bg-white/20 rounded-full'><BsLinkedin /></div>
+                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                            <BsGoogle />
+                        </div>
+                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                            <BsTwitter />
+                        </div>
+                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                            <BsInstagram />
+                        </div>
+                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                            <BsLinkedin />
+                        </div>
                     </div>
                 </div>
 
-                {
-                    footerNav.map((item, i) => <div
-                        key={i}
-                        className='flex flex-col items-center lg:items-start gap-6 lg:gap-12'
-                    >
-                        <h3 className='text-3xl font-semibold'>{item.title}</h3>
-                        <ul className='flex flex-col items-center lg:items-start gap-6'>
-                            {
-                                item.lists.map((list, i) => <React.Fragment key={i}>
-                                    {
-                                        listItems(list.name, list.to)
-                                    }
-                                </React.Fragment>)
-                            }
-                        </ul>
-                    </div>)
-                }
+                <div className='w-full flex flex-col md:flex-row md:items-start md:justify-between gap-16'>
+                    {
+                        footerNav.map((item, i) => <div
+                            key={i}
+                            className='flex flex-col items-center lg:items-start gap-6 lg:gap-12'
+                        >
+                            <h3 className='text-3xl font-semibold'>{item.title}</h3>
+                            <ul className='flex flex-col items-center lg:items-start gap-6'>
+                                {
+                                    item.lists.map((list, i) => <React.Fragment key={i}>
+                                        {
+                                            listItems(list.name, list.to)
+                                        }
+                                    </React.Fragment>)
+                                }
+                            </ul>
+                        </div>)
+                    }
+                </div>
             </div>
         </footer>
     );

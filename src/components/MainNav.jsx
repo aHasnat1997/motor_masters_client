@@ -6,6 +6,7 @@ import Logo from "./Logo";
 
 /**
  * Main navigation bar component for the website.
+ * @returns {JSX.Element} Main navigation.
  */
 export default function MainNav() {
     // State to manage the mobile menu's open/close state.
@@ -58,7 +59,7 @@ export default function MainNav() {
     // Large screen navigation JSX.
     const lgNav = (
         <div className="flex justify-between items-center">
-            <Logo />
+            <Logo position='nav' />
             <ul className="flex items-center gap-10">
                 {menuItems.map(item => (
                     <React.Fragment key={item.menu}>
@@ -76,7 +77,7 @@ export default function MainNav() {
     // Small screen navigation JSX.
     const smNav = (
         <div className="flex justify-between items-center">
-            <Logo />
+            <Logo position='nav' />
             <div>
                 <button
                     className="px-3 py-1 click-effect"
