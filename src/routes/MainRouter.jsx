@@ -5,7 +5,7 @@ export const MainRouter = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Lazy name='App' />}>
             <Route path="/" element={<Lazy name='ClientLayout' />}>
-
+                <Route path="/" element={<Lazy name='Home' />} />
             </Route>
             <Route path="/auth" element={<Lazy name='AuthLayout' />}>
 
