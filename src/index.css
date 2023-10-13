@@ -21,6 +21,10 @@
     @apply outline-none duration-200 border border-primary hover:bg-primary text-primary hover:text-white text-lg md:text-xl font-semibold rounded-md click-effect
 }
 
+.btn-outline {
+    @apply outline-none duration-200 border text-lg md:text-xl font-semibold rounded-md click-effect
+}
+
 .btn-slider {
     @apply outline-none duration-200 bg-gray-700/30 hover:bg-primary text-white text-lg md:text-xl font-semibold rounded-full click-effect
 }
@@ -36,5 +40,5 @@
 
 /* test class */
 .test {
-    color: #00000034;
+    color: #0000005b;
 }
