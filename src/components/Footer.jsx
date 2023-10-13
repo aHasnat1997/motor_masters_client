@@ -74,7 +74,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-gray-800 w-full">
-            <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16'>
+            <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16 lg:gap-32'>
                 <div className='w-80 flex flex-col items-center gap-12'>
                     <Logo position='footer' />
                     <p className='text-xl'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
