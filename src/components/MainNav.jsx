@@ -121,9 +121,11 @@ export default function MainNav() {
     );
 
     return (
-        <nav className="w-full max-container py-3">
-            <div className="hidden lg:block">{lgNav}</div>
-            <div className="lg:hidden">{smNav}</div>
+        <nav className="w-full bg-white fixed top-0 z-40 shadow-xl">
+            <div className="max-container py-3">
+                <div className="hidden lg:block">{lgNav}</div>
+                <div className="lg:hidden">{smNav}</div>
+            </div>
             <div
                 className={`lg:hidden fixed top-0 z-50 w-[75%] duration-1000 
                 ${open ? 'right-0' : '-right-[100rem]'}`}
