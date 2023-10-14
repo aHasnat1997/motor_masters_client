@@ -8,9 +8,9 @@ import Title from "./Title";
  */
 export default function About() {
     return (
-        <section className="max-container flex flex-col-reverse md:flex-row items-center gap-16">
+        <section className="max-container flex flex-col-reverse lg:flex-row items-center gap-16">
             <div className="">
-                <div className="md:w-[35rem] md:h-[30rem] overflow-hidden rounded-xl">
+                <div className="lg:w-[35rem] lg:h-[30rem] overflow-hidden rounded-xl">
                     <img src={person} alt="person" className="w-full h-full" />
                 </div>
             </div>
