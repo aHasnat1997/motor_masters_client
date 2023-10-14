@@ -13,15 +13,24 @@ export default {
         "secondary-hover": "#00829a",
       },
       animation: {
-        imgBlur: 'imgBlur 5s linear infinite',
-        textSlid: 'textSlid 5s linear infinite',
+        imgBlur: 'imgBlur 6s linear infinite',
+        textSlid: 'textSlid 6s linear infinite',
         slideTop: 'slideFromTop 5s linear infinite'
       },
       keyframes: {
         imgBlur: {
-          '0%, 100%': { filter: 'blur(8px)' },
-          '20%': { filter: 'blur(0px)' },
-          '80%': { filter: 'blur(0px)' },
+          '0%, 100%': {
+            filter: 'blur(1.5rem)',
+            transform: 'scale(1.3)'
+          },
+          '20%': {
+            filter: 'blur(0px)',
+            transform: 'scale(1)'
+          },
+          '80%': {
+            filter: 'blur(0px)',
+            transform: 'scale(1)'
+          },
         },
         textSlid: {
           '0%': {
