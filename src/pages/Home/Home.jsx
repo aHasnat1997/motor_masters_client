@@ -1,4 +1,4 @@
-import Banner from "./sections/Banner";
+import Hero from "./sections/Hero";
 
 /**
  * Home page of the website.
@@ -7,7 +7,7 @@ import Banner from "./sections/Banner";
 export default function Home() {
     return (
         <div className="">
-            <Banner />
+            <Hero />
         </div>
     );
 }
