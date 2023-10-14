@@ -6,6 +6,7 @@ import service4 from '../../../assets/services/4.jpg';
 import service5 from '../../../assets/services/5.jpg';
 import service6 from '../../../assets/services/6.jpg';
 import ServiceCard from "../../../components/ServiceCard";
+import uid from "../../../Utils/uid";
 
 /**
  * Service section from Home page
@@ -14,37 +15,37 @@ import ServiceCard from "../../../components/ServiceCard";
 export default function Service() {
     const serviceData = [
         {
-            id: '1',
+            id: uid(),
             title: 'Electrical System',
             image: service1,
             price: 20
         },
         {
-            id: '2',
+            id: uid(),
             title: 'Engine Diagnostics',
             image: service2,
             price: 25
         },
         {
-            id: '3',
+            id: uid(),
             title: 'Auto Car Repair',
             image: service3,
             price: 50.5
         },
         {
-            id: '4',
+            id: uid(),
             title: 'Electrical System',
             image: service4,
             price: 35.5
         },
         {
-            id: '5',
+            id: uid(),
             title: 'Engine Diagnostics',
             image: service5,
             price: 35.5
         },
         {
-            id: '6',
+            id: uid(),
             title: 'Auto Car Repair',
             image: service6,
             price: 60

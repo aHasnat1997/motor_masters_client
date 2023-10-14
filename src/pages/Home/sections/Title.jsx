@@ -10,7 +10,7 @@ export default function Title({ subTitle, mainTitle, paragraph }) {
     return (
         <div className={`flex flex-col gap-4 ${paragraph ? 'items-center text-center' : ''}`}>
             <h4 className="text-2xl font-semibold italic text-primary">{subTitle}</h4>
-            <h2 className="lg:w-1/2 text-4xl lg:text-6xl font-bold leading-[3.5rem]">{mainTitle}</h2>
+            <h2 className="text-4xl lg:text-6xl font-bold leading-[3.5rem]">{mainTitle}</h2>
             <p className="lg:w-1/2 text-xl text-gray-500 flex flex-col gap-4 leading-9">{paragraph}</p>
         </div>
     );
