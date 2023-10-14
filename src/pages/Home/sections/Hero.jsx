@@ -29,8 +29,8 @@ export default function Hero() {
     // Change contents every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentSlide((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000);
+            setCurrentSlide((prev) => (prev + 1) % images.length);
+        }, 6000);
 
         return () => {
             clearInterval(interval);
@@ -38,7 +38,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className='relative h-[91vh]'>
+        <section className='relative h-[91vh] overflow-hidden'>
             <div style={{
                 backgroundImage: `radial-gradient(#0000005b, #000000), url(${images[currentSlide]})`,
                 backgroundSize: 'cover',
@@ -49,7 +49,7 @@ export default function Hero() {
             />
             <div className='w-full h-full absolute top-0 flex items-center'>
                 <div className='max-container'>
-                    <div className='w-full lg:w-1/2 flex flex-col gap-8 overflow-hidden lg:overflow-visible'>
+                    <div className='w-full lg:w-1/2 flex flex-col gap-8'>
                         <h1 className='text-white text-4xl md:text-8xl font-bold animate-textSlid'>
                             {headings[currentSlide]}
                         </h1>
