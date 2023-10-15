@@ -1,18 +1,11 @@
-import box from '../../../assets/icons/box.svg';
-import boxW from '../../../assets/icons/box-w.svg';
-import clock from '../../../assets/icons/clock.svg';
-import clockW from '../../../assets/icons/clock-w.svg';
-import group from '../../../assets/icons/group.svg';
-import groupW from '../../../assets/icons/group-w.svg';
-import shield from '../../../assets/icons/shield.svg';
-import shieldW from '../../../assets/icons/shield-w.svg';
-import support from '../../../assets/icons/support.svg';
-import supportW from '../../../assets/icons/support-w.svg';
-import wrench from '../../../assets/icons/wrench.svg';
-import wrenchW from '../../../assets/icons/wrench-w.svg';
 import Title from './Title';
 import uid from '../../../Utils/uid';
 import { useState } from 'react';
+import { RiTeamLine } from "react-icons/ri";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import { BiSupport } from "react-icons/bi";
+import { BsTools, BsFillBoxSeamFill } from "react-icons/bs";
+import { MdOutlineVerifiedUser } from "react-icons/md";
 
 /**
  * Features section for the Home page.  
@@ -24,38 +17,32 @@ export default function Features() {
     const boxData = [
         {
             id: uid(),
-            icon: group,
-            hoverIcon: groupW,
+            icon: <RiTeamLine />,
             title: 'Expert Team'
         },
         {
             id: uid(),
-            icon: clock,
-            hoverIcon: clockW,
+            icon: <AiOutlineClockCircle />,
             title: 'Timely Delivery'
         },
         {
             id: uid(),
-            icon: support,
-            hoverIcon: supportW,
+            icon: <BiSupport />,
             title: '24/7 Support'
         },
         {
             id: uid(),
-            icon: wrench,
-            hoverIcon: wrenchW,
+            icon: <BsTools />,
             title: 'Best Equipment'
         },
         {
             id: uid(),
-            icon: shield,
-            hoverIcon: shieldW,
+            icon: <MdOutlineVerifiedUser />,
             title: '100% Guaranty'
         },
         {
             id: uid(),
-            icon: box,
-            hoverIcon: boxW,
+            icon: <BsFillBoxSeamFill />,
             title: 'Timely Delivery'
         },
     ];
@@ -67,11 +54,9 @@ export default function Features() {
                 {
                     boxData.map(data => <div
                         key={data.id}
-                        className='border rounded-xl shadow-md duration-500 hover:bg-primary hover:text-white p-8 flex flex-col items-center justify-center'
-                        onMouseEnter={() => setWhite(true)}
-                        onMouseLeave={() => setWhite(false)}
+                        className='border rounded-xl shadow-md duration-500 hover:bg-primary text-gray-400 hover:text-white p-8 flex flex-col items-center justify-center gap-2'
                     >
-                        <img src={white ? data.hoverIcon : data.icon} alt="icon" />
+                        <span className='text-6xl'>{data.icon}</span>
                         <p className='font-bold'>{data.title}</p>
                     </div>)
                 }
