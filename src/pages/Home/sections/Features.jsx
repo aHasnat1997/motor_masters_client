@@ -1,6 +1,5 @@
 import Title from './Title';
 import uid from '../../../Utils/uid';
-import { useState } from 'react';
 import { RiTeamLine } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BiSupport } from "react-icons/bi";
@@ -12,8 +11,6 @@ import { MdOutlineVerifiedUser } from "react-icons/md";
  * @returns Features.
  */
 export default function Features() {
-    const [white, setWhite] = useState(false);
-
     const boxData = [
         {
             id: uid(),
@@ -57,7 +54,7 @@ export default function Features() {
                         className='border rounded-xl shadow-md duration-500 hover:bg-primary text-gray-400 hover:text-white p-8 flex flex-col items-center justify-center gap-2'
                     >
                         <span className='text-6xl'>{data.icon}</span>
-                        <p className='font-bold'>{data.title}</p>
+                        <p className='font-bold text-center'>{data.title}</p>
                     </div>)
                 }
             </div>
