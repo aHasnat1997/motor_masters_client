@@ -27,8 +27,8 @@ export default function MainNav() {
             to: '/'
         },
         {
-            menu: 'Blog',
-            to: '/'
+            menu: 'Products',
+            to: '/products'
         },
         {
             menu: 'Contact',

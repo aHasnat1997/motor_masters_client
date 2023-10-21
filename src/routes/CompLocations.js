@@ -1,7 +1,8 @@
 export default {
     App: () => import('../App'),
     ClientLayout: () => import('../layouts/ClientLayout'),
-    AuthLayout: () => import("../layouts/AuthLayout"),
-    DashboardLayout: () => import("../layouts/DashboardLayout"),
-    Home: () => import("../pages/Home/Home")
+    AuthLayout: () => import('../layouts/AuthLayout'),
+    DashboardLayout: () => import('../layouts/DashboardLayout'),
+    Home: () => import('../pages/Home/Home'),
+    AllProducts: () => import('../pages/Products/AllProducts')
 }
