@@ -24,7 +24,7 @@ export default function MainNav() {
         },
         {
             menu: 'Services',
-            to: '/'
+            to: '/services'
         },
         {
             menu: 'Blog',

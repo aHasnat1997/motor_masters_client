@@ -6,6 +6,9 @@ export const MainRouter = createBrowserRouter(
         <Route path="/" element={<Lazy name='App' />}>
             <Route path="/" element={<Lazy name='ClientLayout' />}>
                 <Route path="/" element={<Lazy name='Home' />} />
+                <Route path="/services" element={<Lazy name='AllServices' />} />
+                {/* to-do: dynamic id */}
+                <Route path="/services/123" element={<Lazy name='SingleServices' />} />
             </Route>
             <Route path="/auth" element={<Lazy name='AuthLayout' />}>
 
