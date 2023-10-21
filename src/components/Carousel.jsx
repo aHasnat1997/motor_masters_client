@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 /**
- * Pagination Component * @param {Number} page Current Page Number 
+ * Carousel Component * @param {Number} page Current Page Number 
  * @param {Number} setPage Set Current Page Number 
  * @param {Number} pageLimit Max Page Number * 
- * @returns Pagination Component 
+ * @returns Carousel Component 
  * */
-export default Pagination = ({ page, setPage, pageLimit }) => {
+export default Carousel = ({ page, setPage, pageLimit }) => {
     const getPageNumbers = () => {
         const pageNumbers = [];
         for (let i = 1; i <= pageLimit; i++) {
@@ -16,37 +16,21 @@ export default Pagination = ({ page, setPage, pageLimit }) => {
         return pageNumbers;
     };
 
-    useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-    }, [page]);
-
     const pageNumbers = getPageNumbers();
-    const maxVisibleButtons = 5;
+    const maxVisibleButtons = 2;
     const buttonsToShow = [];
-    if (pageLimit <= maxVisibleButtons) {
-        buttonsToShow.push(...pageNumbers.slice(0, maxVisibleButtons));
-    } else if (page <= maxVisibleButtons - 2) {
-        buttonsToShow.push(...pageNumbers.slice(0, maxVisibleButtons - 1), "...");
-    } else if (page > pageLimit - maxVisibleButtons + 2) {
-        buttonsToShow.push("...", ...pageNumbers.slice(pageLimit - maxVisibleButtons + 1));
-    } else {
-        const start = page - 2;
-        const end = page + 2;
-        buttonsToShow.push("...", ...pageNumbers.slice(start - 1, end), "...");
-    }
+    buttonsToShow.push(...pageNumbers.slice(0, maxVisibleButtons));
 
     return (
         <div className="flex items-center gap-1 lg:gap-2">
             <button
-                className="bg-primary rounded-full lg:p-1"
+                className="btn-slider"
                 onClick={() => page > 1 && setPage(page - 1)} >
                 <AiOutlineArrowLeft />
             </button>
             {
                 buttonsToShow.map((num, i) => (<div
                     key={i}
-                    className={`h-12 w-12 flex items-center justify-center text-xs lg:text-sm rounded-full 
-                    ${page === num ? "bg-primary" : "bg-[#CFF6EF]"}`}
                 >
                     <button
                         key={i}
@@ -58,7 +42,7 @@ export default Pagination = ({ page, setPage, pageLimit }) => {
                 </div>))
             }
             <button
-                className="bg-primary rounded-full lg:p-1"
+                className="btn-slider"
                 onClick={() => page < pageLimit && setPage(page + 1)}
             >
                 <AiOutlineArrowRight />
