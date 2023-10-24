@@ -14,7 +14,7 @@ export default function Service() {
             <Title subTitle='Service' mainTitle='Our Service Area' paragraph="the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable." />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    serviceData.map(data => <div key={data.id}>
+                    serviceData.slice(0, 6).map(data => <div key={data.id}>
                         <ServiceCard
                             image={data.image}
                             title={data.title}
