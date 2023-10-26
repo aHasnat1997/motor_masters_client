@@ -15,7 +15,9 @@ import Cart from "../components/Cart";
 export default function ClientLayout() {
     return (
         <>
+
             <MainNav />
+
             <main>
 
                 <div>

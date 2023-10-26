@@ -9,7 +9,7 @@ export default function Banner({ image, title, route }) {
     return (
         <div style={{
             width: '100%',
-            background: `linear-gradient(to right, #000000fb , #00000034), url(${image})`,
+            backgroundImage: `linear-gradient(to right, #000000fb , #00000034), url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
