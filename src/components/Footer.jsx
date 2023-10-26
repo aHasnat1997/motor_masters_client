@@ -76,7 +76,7 @@ export default function Footer() {
         <footer className="bg-gray-800 w-full">
             <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16 lg:gap-32'>
                 <div className='w-80 flex flex-col items-center gap-12'>
-                    <Logo position='footer' />
+                    <Logo color='white' />
                     <p className='text-xl'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
                     <div className='flex items-center gap-8 text-2xl'>
                         <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>

@@ -27,7 +27,7 @@ export default function MainNav() {
             to: '/'
         },
         {
-            menu: 'Blog',
+            menu: 'Products',
             to: '/'
         },
         {
@@ -57,27 +57,47 @@ export default function MainNav() {
     };
 
     // Large screen navigation JSX.
+    // const lgNav = (
+    //     <div className="flex justify-between items-center">
+    //         <Logo position='nav' />
+    //         <ul className="flex items-center gap-10">
+    //             {menuItems.map(item => (
+    //                 <React.Fragment key={item.menu}>
+    //                     {menuList(item.menu, item.to, false)}
+    //                 </React.Fragment>
+    //             ))}
+    //         </ul>
+    //         <div className="flex items-center gap-3">
+    //             <button className="btn-primary-outline px-4 py-2">Log In</button>
+    //             <button className="btn-primary px-4 py-2">Sign Up</button>
+    //         </div>
+    //     </div>
+    // );
+
     const lgNav = (
-        <div className="flex justify-between items-center">
-            <Logo position='nav' />
-            <ul className="flex items-center gap-10">
-                {menuItems.map(item => (
-                    <React.Fragment key={item.menu}>
-                        {menuList(item.menu, item.to, false)}
-                    </React.Fragment>
-                ))}
-            </ul>
-            <div className="flex items-center gap-3">
-                <button className="btn-primary-outline px-4 py-2">Log In</button>
-                <button className="btn-primary px-4 py-2">Sign Up</button>
+        <div className="relative h-full">
+            <div className="w-[35%] h-full absolute z-20">
+                <div className="w-full h-full border-solid border-t-[7rem] border-t-primary border-r-[4rem] border-x-transparent" />
+                <div className="w-full h-full absolute z-20 top-0 flex items-center justify-center bg-transparent">
+                    <Logo color='white' />
+                </div>
+            </div>
+            <div className="w-full h-full ">
+                <div className="w-full flex items-center">
+                    <div className="w-[36.5%] h-full border-solid border-b-[3rem] border-b-primary/70 border-r-[1.5rem] border-x-transparent" />
+                    <h5>Welcome To Car Repair & Service Theme</h5>
+                </div>
+                <div className="bg-slate-800 w-full h-full"></div>
             </div>
         </div>
     );
 
+
+
     // Small screen navigation JSX.
     const smNav = (
         <div className="flex justify-between items-center">
-            <Logo position='nav' />
+            <Logo color='white' />
             <div>
                 <button
                     className="px-3 py-1 click-effect"
@@ -121,11 +141,9 @@ export default function MainNav() {
     );
 
     return (
-        <nav className="w-full bg-white fixed top-0 z-40 shadow-xl">
-            <div className="max-container py-3">
-                <div className="hidden lg:block">{lgNav}</div>
-                <div className="lg:hidden">{smNav}</div>
-            </div>
+        <nav className="w-full">
+            <div className="hidden lg:block h-28">{lgNav}</div>
+            <div className="lg:hidden">{smNav}</div>
             <div
                 className={`lg:hidden fixed top-0 z-50 w-[75%] duration-1000 
                 ${open ? 'right-0' : '-right-[100rem]'}`}

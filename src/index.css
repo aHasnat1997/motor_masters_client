@@ -34,6 +34,10 @@
     @apply w-full md:w-[50rem] border-solid border-b-[4.5rem] border-b-primary border-x-[2rem] md:border-x-[4rem] border-x-transparent
 }
 
+.nav-shape {
+    @apply border-solid border-b-[6rem] border-b-primary border-r-[16rem] border-x-transparent
+}
+
 /* test class */
 .test {
     color: #00000034;
