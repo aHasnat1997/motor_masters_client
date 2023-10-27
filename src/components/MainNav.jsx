@@ -11,6 +11,7 @@ import Logo from "./Logo";
 export default function MainNav() {
     // State to manage the mobile menu's open/close state.
     const [open, setOpen] = useState(false);
+    const [sticky, setSticky] = useState(false);
 
     // Navigation menu items.
     const menuItems = [
@@ -31,6 +32,18 @@ export default function MainNav() {
             to: '/'
         }
     ];
+
+    // making sticky nav after scroll 
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 720) {
+            document.getElementById('navbar').classList.add("sticky-nav");
+            setSticky(true);
+        }
+        else {
+            document.getElementById('navbar').classList.remove("sticky-nav");
+            setSticky(false);
+        }
+    })
 
     /**
      * Generates a list item for the navigation menu.
@@ -57,7 +70,7 @@ export default function MainNav() {
         <div className="relative h-full">
             <div className="w-[35%] h-full absolute z-20">
                 <div className="w-full h-full border-solid border-t-[7rem] border-t-primary border-r-[4rem] border-x-transparent" />
-                <div className="w-full absolute z-20 top-0 flex items-center justify-center bg-transparent">
+                <div className="w-full mt-2 absolute z-20 top-0 flex items-center justify-center bg-transparent">
                     <Logo color='white' width='w-[18rem]' />
                 </div>
             </div>
@@ -98,16 +111,32 @@ export default function MainNav() {
 
     // Small screen navigation JSX.
     const smNav = (
-        <div className="flex justify-between items-center">
-            <Logo color='white' />
-            <div>
-                <button
-                    className="px-3 py-1 click-effect"
-                    onClick={() => setOpen(true)}
-                    aria-label="Open Menu" // Accessibility label for screen readers.
-                >
-                    <FaBarsStaggered className="text-4xl font-semibold" />
-                </button>
+        <div>
+            <div className="w-full flex items-center justify-center py-2 gap-4">
+                <p>Follow Us : </p>
+                <div className="flex items-center gap-4">
+                    <FaFacebookF className="hover:text-primary" />
+                    <FaInstagram className="hover:text-primary" />
+                    <FaLinkedinIn className="hover:text-primary" />
+                    <FaTwitter className="hover:text-primary" />
+                </div>
+            </div>
+            <div className="flex justify-between items-center py-3 relative bg-gray-800">
+                <div className="w-[70%] h-full absolute z-20">
+                    <div className="w-full h-full border-solid border-t-[4.5rem] border-t-primary border-r-[4rem] border-x-transparent" />
+                    <div className="w-full mt-2 ml-4 absolute z-20 top-0">
+                        <Logo color='white' width='w-[9rem]' />
+                    </div>
+                </div>
+                <div className="ml-auto">
+                    <button
+                        className="px-3 py-1 click-effect text-white"
+                        onClick={() => setOpen(true)}
+                        aria-label="Open Menu" // Accessibility label for screen readers.
+                    >
+                        <FaBarsStaggered className="text-4xl font-semibold" />
+                    </button>
+                </div>
             </div>
         </div>
     );
@@ -144,19 +173,20 @@ export default function MainNav() {
 
     return (
         <div>
-            <nav className="w-full lg:h-28 fixed top-0 right-0 left-0 z-40 bg-white shadow-xl">
+            <nav id="navbar" className={`w-full lg:h-28 bg-white shadow-xl duration-1000 ${sticky ? 'top-0' : '-top-20'} `}>
                 <div className="hidden lg:block">{lgNav}</div>
-                <div className="lg:hidden">{smNav}</div>
+                <div className={`lg:hidden ${sticky ? '-mt-10' : ''}`}>{smNav}</div>
             </nav>
-            <div
-                className={`lg:hidden fixed top-0 z-50 w-[75%] duration-1000 
-                ${open ? 'right-0' : '-right-[100rem]'}`}
-            >
-                <OutSideClick
-                    show={open}
-                    onClickOutside={() => setOpen(false)}
-                    body={sideBar}
-                />
+            <div className={`lg:hidden w-full fixed top-0 bottom-0 z-50 bg-black/40 ${open ? 'right-0' : '-right-[100rem]'}`}>
+                <div
+                    className={`fixed top-0 z-50 w-[75%] duration-500 ${open ? 'right-0' : '-right-[100rem]'}`}
+                >
+                    <OutSideClick
+                        show={open}
+                        onClickOutside={() => setOpen(false)}
+                        body={sideBar}
+                    />
+                </div>
             </div>
         </div>
     );
