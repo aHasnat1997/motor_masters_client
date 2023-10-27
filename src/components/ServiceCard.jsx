@@ -9,20 +9,26 @@ import { AiOutlineArrowRight } from "react-icons/ai";
  */
 export default function ServiceCard({ image, title, price }) {
     return (
-        <div className="w-full border rounded-xl p-6 group shadow-xl duration-300 hover:shadow-2xl">
-            <div className="rounded-xl overflow-hidden">
+        <div className="w-full border rounded-md group shadow-xl duration-300 hover:shadow-2xl overflow-hidden relative">
+            <div className="overflow-hidden">
                 <img
                     src={image}
                     alt="service-image"
                     className="w-full h-60 md:h-80 duration-700 group-hover:scale-110"
                 />
             </div>
-            <h3 className="text-2xl font-semibold mt-8">{title}</h3>
-            <div className="mt-2 text-primary flex justify-between">
-                <h4 className="text-xl">Price : ${price}</h4>
-                <button className="text-4xl px-4 duration-300 hover:translate-x-3 click-effect">
-                    <AiOutlineArrowRight />
-                </button>
+            <div className="w-full bg-white flex items-end justify-center absolute bottom-0 z-10">
+                <div className="w-3/4 bg-primary p-6 group-hover:absolute group-hover:left-0">
+                    <div className="text-white duration-700">
+                        <h3 className="text-xl lg:text-2xl font-semibold">{title}</h3>
+                        <p className="mt-4 duration-700 hidden scale-0 group-hover:block group-hover:scale-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam praesentium, obcaecati possimus nostrum odit suscipit,</p>
+                    </div>
+                </div>
+                <div className="w-1/4 my-5 ml-auto flex items-center justify-center">
+                    <button className="text-4xl duration-300 hover:translate-x-3 click-effect group-hover:text-primary">
+                        <AiOutlineArrowRight />
+                    </button>
+                </div>
             </div>
         </div>
     );

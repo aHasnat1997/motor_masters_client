@@ -28,13 +28,11 @@ export default function ClientLayout() {
                     <ServiceCard image={serviceOne} title='Electrical System' price='20.00' />
                     <ServiceCard image={serviceTwo} title='Electrical System' price='20.00' />
                     <ServiceCard image={serviceThree} title='Electrical System' price='20.00' />
-                    <ServiceCard image={serviceThree} title='Electrical System' price='20.00' />
                 </div>
 
                 <div className="max-container my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <ProductsCard image={productOne} title='Car Engine Plug' price='20.00' ratting={4.4} />
                     <ProductsCard image={productTwo} title='Car Engine Plug' price='20.00' ratting={2.3} />
-                    <ProductsCard image={productThree} title='Car Engine Plug' price='20.00' ratting={5} />
                     <ProductsCard image={productThree} title='Car Engine Plug' price='20.00' ratting={5} />
                 </div>
 
