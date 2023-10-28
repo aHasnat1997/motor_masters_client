@@ -187,6 +187,7 @@ export default function MainNav() {
                         body={sideBar}
                     />
                 </div>
+
             </div>
         </div>
     );
