@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBarsStaggered, FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa6";
 import { OutSideClick } from "./OutSideClick";
@@ -34,16 +34,16 @@ export default function MainNav() {
     ];
 
     // making sticky nav after scroll 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 720) {
-            document.getElementById('navbar').classList.add("sticky-nav");
-            setSticky(true);
-        }
-        else {
-            document.getElementById('navbar').classList.remove("sticky-nav");
-            setSticky(false);
-        }
-    })
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 720) {
+                setSticky(true);
+            }
+            else {
+                setSticky(false);
+            }
+        })
+    }, [])
 
     /**
      * Generates a list item for the navigation menu.
@@ -173,7 +173,7 @@ export default function MainNav() {
 
     return (
         <div>
-            <nav id="navbar" className={`w-full lg:h-28 bg-white shadow-xl duration-1000 ${sticky ? 'top-0' : '-top-20'} `}>
+            <nav id="navbar" className={`w-full lg:h-28 bg-white shadow-xl duration-1000 ${sticky ? 'top-0 sticky-nav' : '-top-20'} `}>
                 <div className="hidden lg:block">{lgNav}</div>
                 <div className={`lg:hidden ${sticky ? '-mt-10' : ''}`}>{smNav}</div>
             </nav>

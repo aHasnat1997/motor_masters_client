@@ -59,6 +59,7 @@
 /* test class */
 .test {
     color: #000000ee;
+}
 
 /* Hiding scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {

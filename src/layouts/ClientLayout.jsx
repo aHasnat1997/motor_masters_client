@@ -10,7 +10,7 @@ export default function ClientLayout() {
     return (
         <main className="min-h-screen flex flex-col">
             <MainNav />
-            <div className="mt-20">
+            <div>
                 <Outlet />
             </div>
             <div className="mt-auto">
