@@ -179,7 +179,7 @@ export default function MainNav() {
             </nav>
             <div className={`lg:hidden w-full fixed top-0 bottom-0 z-50 bg-black/40 ${open ? 'right-0' : '-right-[100rem]'}`}>
                 <div
-                    className={`fixed top-0 z-50 w-[75%] duration-500 ${open ? 'right-0' : '-right-[100rem]'}`}
+                    className={`fixed top-0 z-50 w-[75%] md:w-[50%] duration-500 ${open ? 'right-0' : '-right-[100rem]'}`}
                 >
                     <OutSideClick
                         show={open}

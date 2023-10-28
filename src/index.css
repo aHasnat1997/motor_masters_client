@@ -13,24 +13,28 @@
 }
 
 /* buttons styles */
+.btn {
+    @apply outline-none duration-200 text-lg md:text-xl font-semibold click-effect
+}
+
 .btn-primary {
-    @apply outline-none duration-200 bg-primary hover:bg-primary-hover text-white text-lg md:text-xl font-semibold rounded-md click-effect
+    @apply btn bg-primary hover:bg-primary-hover text-white rounded-md
 }
 
 .btn-outline {
-    @apply outline-none duration-200 border text-lg md:text-xl font-semibold rounded-md click-effect
+    @apply btn border rounded-md
 }
 
 .btn-primary-outline {
-    @apply outline-none duration-200 border border-primary hover:bg-primary text-primary hover:text-white text-lg md:text-xl font-semibold rounded-md click-effect
+    @apply btn border border-primary hover:bg-primary text-primary hover:text-white rounded-md
 }
 
 .btn-slider {
-    @apply outline-none duration-200 bg-gray-700/30 hover:bg-primary text-white text-lg md:text-xl font-semibold rounded-full click-effect
+    @apply btn bg-gray-700/30 hover:bg-primary text-white rounded-full
 }
 
 .btn-cancel {
-    @apply outline-none duration-200 bg-gray-700 hover:bg-gray-600 text-white text-xl md:text-2xl font-semibold rounded-full click-effect
+    @apply btn bg-gray-700 hover:bg-gray-600 text-white text-xl md:text-2xl font-semibold rounded-full
 }
 
 /* Shapes */
@@ -49,5 +53,5 @@
 
 /* test class */
 .test {
-    color: #00000034;
+    color: #000000ee;
 }

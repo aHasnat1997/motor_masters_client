@@ -1,117 +1,228 @@
 import { Link } from 'react-router-dom';
-import { BsGoogle, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
+import {
+    BsGoogle,
+    BsTwitter,
+    BsInstagram,
+    BsLinkedin,
+    BsClock,
+    BsTelephone,
+    BsEnvelopeAt,
+    BsFillSendFill
+} from "react-icons/bs";
+import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 import React from 'react';
 import Logo from './Logo';
+import footerBgImg from '../assets/footer.jpg';
 
 /**
  * Footer component for the website.
  * @returns {JSX.Element} Footer.
  */
 export default function Footer() {
-    // Array containing footer navigation data.
-    const footerNav = [
+    // Array containing footer services data.
+    const services = [
         {
-            title: 'About',
+            title: 'Our Services',
             lists: [
                 {
-                    name: 'Home',
+                    name: 'Car Oil Change',
                     to: '/'
                 },
                 {
-                    name: 'Service',
+                    name: 'Auto Diagnostics',
                     to: '/'
                 },
                 {
-                    name: 'Contact',
-                    to: '/'
-                }
-            ]
-        },
-        {
-            title: 'Company',
-            lists: [
-                {
-                    name: 'Why Car Doctor',
+                    name: 'Battery Problem',
                     to: '/'
                 },
                 {
-                    name: 'About',
-                    to: '/'
-                }
-            ]
-        },
-        {
-            title: 'Support',
-            lists: [
-                {
-                    name: 'Support Center',
+                    name: 'Engine Repair',
                     to: '/'
                 },
                 {
-                    name: 'Feedback',
+                    name: 'Glasses Change',
                     to: '/'
                 },
                 {
-                    name: 'Accessibility',
+                    name: 'Filters & Exhaust',
                     to: '/'
                 },
             ]
-        },
+        }
+    ];
+    // Array containing footer quick link data.
+    const quickLink = [
+        {
+            title: 'Quick link',
+            lists: [
+                {
+                    name: 'Why Choose Us',
+                    to: '/'
+                },
+                {
+                    name: 'Portfolio',
+                    to: '/'
+                },
+                {
+                    name: 'Blog & News',
+                    to: '/'
+                },
+                {
+                    name: 'Contact Us',
+                    to: '/'
+                },
+                {
+                    name: 'Privacy Policy',
+                    to: '/'
+                },
+                {
+                    name: 'Terms & Condition',
+                    to: '/'
+                },
+            ]
+        }
     ];
 
     /**
-     * Generates list items for the footer navigation.
+     * Generates list items for the footer lists.
      * @param {string} name - The text for the list item.
      * @param {string} path - The URL to navigate to.
      * @returns {JSX.Element} - The list item JSX.
      */
     const listItems = (name, path) => {
         return <li className='text-xl group'>
-            <Link to={path}>{name}</Link>
+            <Link to={path} className='flex items-center gap-2'>
+                <MdKeyboardDoubleArrowRight /> {name}
+            </Link>
             <div className='w-full h-1 bg-white duration-700 origin-left scale-x-0 group-hover:scale-x-100' />
         </li>;
     };
 
     return (
-        <footer className="bg-gray-800 w-full">
-            <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16 lg:gap-32'>
-                <div className='w-80 flex flex-col items-center gap-12'>
-                    <Logo color='white' />
-                    <p className='text-xl'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
-                    <div className='flex items-center gap-8 text-2xl'>
-                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
-                            <BsGoogle />
-                        </div>
-                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
-                            <BsTwitter />
-                        </div>
-                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
-                            <BsInstagram />
-                        </div>
-                        <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
-                            <BsLinkedin />
-                        </div>
+        <footer className='mt-52 relative'>
+            <div className='w-full absolute -top-32'>
+                <div className='max-container w-full px-4 py-10 bg-primary rounded-2xl flex flex-col items-center justify-center gap-6'>
+                    <div className='text-white text-center'>
+                        <h3 className='text-xl'>Subscribe our</h3>
+                        <h1 className='text-5xl font-semibold'>Newsletter</h1>
+                        <h3 className='text-xl'>To get updates</h3>
+                    </div>
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-0'>
+                        <input
+                            type="text"
+                            className='w-[95%] outline-none px-6 py-4 text-xl'
+                            placeholder='Enter your email'
+                        />
+                        <button className='btn-outline p-4 text-xl text-white flex items-center gap-4 duration-300 hover:bg-gray-800 hover:border-gray-800'>
+                            Subscribe <BsFillSendFill />
+                        </button>
                     </div>
                 </div>
+            </div>
+            <div
+                style={{
+                    backgroundImage: `linear-gradient(#000000ee , #000000ee), url(${footerBgImg})`,
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'repeat',
+                }}
+                className='pt-48 lg:pt-36'
+            >
+                <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16 lg:gap-32'>
+                    <div className='w-80 flex flex-col items-center gap-12'>
+                        <Logo color='white' />
+                        <p className='text-xl'>Motor Masters blandit aliquet elit, eget tincidunt Nibh pulvinar a.</p>
+                        <div className='flex items-center gap-8 text-2xl'>
+                            <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                                <BsGoogle />
+                            </div>
+                            <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                                <BsTwitter />
+                            </div>
+                            <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                                <BsInstagram />
+                            </div>
+                            <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
+                                <BsLinkedin />
+                            </div>
+                        </div>
+                    </div>
 
-                <div className='w-full flex flex-col md:flex-row md:items-start md:justify-between gap-16'>
-                    {
-                        footerNav.map((item, i) => <div
-                            key={i}
-                            className='flex flex-col items-center lg:items-start gap-6 lg:gap-12'
-                        >
-                            <h3 className='text-3xl font-semibold'>{item.title}</h3>
-                            <ul className='flex flex-col items-center lg:items-start gap-6'>
-                                {
-                                    item.lists.map((list, i) => <React.Fragment key={i}>
+                    <div className='w-full flex flex-col md:flex-row md:items-start md:justify-around gap-16'>
+                        <div>
+                            {
+                                services.map((item, i) => <div
+                                    key={i}
+                                    className='flex flex-col items-center lg:items-start gap-6 lg:gap-12'
+                                >
+                                    <h3 className='text-3xl font-semibold'>{item.title}</h3>
+                                    <ul className='flex flex-col items-start gap-2'>
                                         {
-                                            listItems(list.name, list.to)
+                                            item.lists.map((list, i) => <React.Fragment key={i}>
+                                                {
+                                                    listItems(list.name, list.to)
+                                                }
+                                            </React.Fragment>)
                                         }
-                                    </React.Fragment>)
-                                }
-                            </ul>
-                        </div>)
-                    }
+                                    </ul>
+                                </div>)
+                            }
+                        </div>
+                        <div>
+                            {
+                                quickLink.map((item, i) => <div
+                                    key={i}
+                                    className='flex flex-col items-center lg:items-start gap-6 lg:gap-12'
+                                >
+                                    <h3 className='text-3xl font-semibold'>{item.title}</h3>
+                                    <ul className='flex flex-col items-start gap-2'>
+                                        {
+                                            item.lists.map((list, i) => <React.Fragment key={i}>
+                                                {
+                                                    listItems(list.name, list.to)
+                                                }
+                                            </React.Fragment>)
+                                        }
+                                    </ul>
+                                </div>)
+                            }
+                        </div>
+                    </div>
+
+                    <div
+                        className='flex flex-col items-center lg:items-start gap-6 lg:gap-12'
+                    >
+                        <h3 className='text-3xl font-semibold'>Contact Us</h3>
+                        <ul className='flex flex-col items-start gap-8'>
+                            <li className='flex items-start gap-4'>
+                                <BsClock className='text-primary text-4xl' />
+                                <div>
+                                    <p>Working Time</p>
+                                    <p className='text-lg font-semibold'>Mon-Fri : 09.00 am - 05.00 pm</p>
+                                </div>
+                            </li>
+                            <li className='flex items-start gap-4'>
+                                <BsTelephone className='text-primary text-4xl' />
+                                <div>
+                                    <p>Phone</p>
+                                    <p className='text-lg font-semibold'>+125 (405) 555-0128</p>
+                                </div>
+                            </li>
+                            <li className='flex items-start gap-4'>
+                                <BsEnvelopeAt className='text-primary text-4xl' />
+                                <div>
+                                    <p>Email</p>
+                                    <p className='text-lg font-semibold'>quick.help@gmail.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='bg-black py-6'>
+                    <div className='max-container w-full text-white text-lg text-center'>
+                        <p>&copy; {new Date().getFullYear()} All Rights Reserved By <span className='text-primary hover:text-white'>Motor Masters</span></p>
+                    </div>
                 </div>
             </div>
         </footer>
