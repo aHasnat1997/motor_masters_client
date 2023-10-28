@@ -10,7 +10,7 @@ import Ratting from "./Ratting";
  */
 export default function ProductsCard({ image, title, price, ratting }) {
     return (
-        <div className="cursor-pointer w-full border rounded-xl p-6 group shadow-xl duration-300 hover:shadow-2xl click-effect">
+        <div className="cursor-pointer w-full rounded-xl p-6 group shadow-xl duration-300 hover:shadow-2xl click-effect">
             <div className="rounded-xl overflow-hidden">
                 <img
                     src={image}
