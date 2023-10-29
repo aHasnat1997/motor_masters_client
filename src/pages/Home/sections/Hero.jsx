@@ -5,6 +5,7 @@ import banner3 from '../../../assets/banner/3.jpg';
 import banner4 from '../../../assets/banner/4.jpg';
 import banner5 from '../../../assets/banner/5.jpg';
 import banner6 from '../../../assets/banner/6.jpg';
+import Button from '../../../components/Button';
 
 // Images array for background
 const images = [banner1, banner2, banner3, banner4, banner5, banner6];
@@ -56,8 +57,15 @@ export default function Hero() {
                         <div className='animate-slideTop'>
                             <p className='text-white md:text-lg'>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div className='flex flex-col md:flex-row items-center gap-2 mt-4'>
-                                <button className='btn-primary px-6 py-3'>Discover More</button>
-                                <button className='btn-outline border-white text-white px-6 py-3'>Latest Project</button>
+                                <Button
+                                    title='Discover More'
+                                    btnStyle='btn-primary px-6 py-4'
+                                />
+                                <Button
+                                    title='Latest Project'
+                                    btnStyle='btn-outline border-white text-white px-6 py-4 hover:text-black'
+                                    bgHover='bg-white'
+                                />
                             </div>
                         </div>
                     </div>
