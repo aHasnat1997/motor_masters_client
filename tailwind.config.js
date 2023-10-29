@@ -8,9 +8,7 @@ export default {
     extend: {
       colors: {
         "primary": "#ff3811",
-        "primary-hover": "#ff6546",
-        "secondary": "#006173",
-        "secondary-hover": "#00829a",
+        "secondary": "#1f2937",
       },
       animation: {
         imgBlur: 'imgBlur 6s linear infinite',

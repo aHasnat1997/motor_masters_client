@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBarsStaggered, FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa6";
 import { OutSideClick } from "./OutSideClick";
 import Logo from "./Logo";
+import Button from "./Button";
 
 /**
  * Main navigation bar component for the website.
@@ -101,7 +102,11 @@ export default function MainNav() {
                             ))}
                         </ul>
                         <div className="mr-[15%]">
-                            <button className="btn-outline border-white hover:border-primary hover:bg-primary text-white px-4 py-2">Log In</button>
+                            <Button
+                                title="Log In"
+                                btnStyle="btn-outline border-white text-white px-4 py-2 hover:text-secondary"
+                                bgHover="bg-white"
+                            />
                         </div>
                     </div>
                 </div>
@@ -129,13 +134,13 @@ export default function MainNav() {
                     </div>
                 </div>
                 <div className="ml-auto">
-                    <button
-                        className="px-3 py-1 click-effect text-white"
+                    <Button
+                        title={<FaBarsStaggered className="text-4xl font-semibold" />}
+                        btnStyle="px-3 py-1 click-effect text-white"
+                        bgHover="bg-transparent"
                         onClick={() => setOpen(true)}
                         aria-label="Open Menu" // Accessibility label for screen readers.
-                    >
-                        <FaBarsStaggered className="text-4xl font-semibold" />
-                    </button>
+                    />
                 </div>
             </div>
         </div>
@@ -145,18 +150,17 @@ export default function MainNav() {
     const sideBar = (
         <div className="relative h-screen bg-white py-12">
             <div className="px-12 flex items-center gap-3">
-                <button
-                    className="btn-primary-outline w-full py-2"
+                <Button
+                    title="Log In"
+                    btnStyle="btn-primary-outline w-full py-2 hover:text-white"
+                    bgHover="bg-primary"
                     onClick={() => setOpen(false)}
-                >
-                    Log In
-                </button>
-                <button
-                    className="btn-primary w-full py-2"
+                />
+                <Button
+                    title="Sign Up"
+                    btnStyle="btn-primary w-full py-2"
                     onClick={() => setOpen(false)}
-                >
-                    Sign Up
-                </button>
+                />
             </div>
             <div className="my-8">
                 <hr />
