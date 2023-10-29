@@ -117,6 +117,7 @@ export default function Footer() {
                         <button className='btn-outline p-4 text-xl text-white flex items-center gap-4 duration-300 hover:bg-gray-800 hover:border-gray-800'>
                             Subscribe <BsFillSendFill />
                         </button>
+
                     </div>
                 </div>
             </div>

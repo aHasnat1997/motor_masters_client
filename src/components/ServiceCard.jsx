@@ -34,6 +34,7 @@ export default function ServiceCard({ image, title, price }) {
                         <AiOutlineArrowRight />
                     </button>
                 </div>
+
             </div>
         </div>
     );
