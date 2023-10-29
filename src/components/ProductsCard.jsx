@@ -10,7 +10,7 @@ import Ratting from "./Ratting";
  */
 export default function ProductsCard({ image, title, price, ratting }) {
     return (
-        <div className="cursor-pointer w-full border rounded-xl p-6 group shadow-xl duration-300 hover:shadow-2xl click-effect">
+        <div className="cursor-pointer w-full rounded-xl p-6 group shadow-xl duration-300 hover:shadow-2xl click-effect">
             <div className="rounded-xl overflow-hidden">
                 <img
                     src={image}
@@ -20,7 +20,7 @@ export default function ProductsCard({ image, title, price, ratting }) {
             </div>
             <div className="mt-8 flex flex-col items-center gap-4">
                 <h3 className="text-2xl font-semibold">{title}</h3>
-                <h4 className="text-xl text-primary">Price : ${price}</h4>
+                <h4 className="text-xl text-primary">Price : ${price.toFixed(2)}</h4>
                 <Ratting ratting={ratting} />
             </div>
         </div>

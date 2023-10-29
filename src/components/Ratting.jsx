@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 
 /**
@@ -6,8 +7,10 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
  * @returns {JSX.Element} Ratting stars
  */
 export default function Ratting({ ratting = 0 }) {
+    const [open, setOpen] = useState(false);
+
     return (
-        <div className="flex items-center text-2xl gap-6 text-[#FF912C]">
+        <div className="relative flex items-center text-2xl gap-6 text-[#FF912C] tooltip">
             {
                 [...Array(Math.ceil(ratting - 1))].map((array, i) => <div key={i}>
                     <BsStarFill />
@@ -16,6 +19,11 @@ export default function Ratting({ ratting = 0 }) {
             {
                 ratting % 1 === 0 ? <BsStarFill /> : <BsStarHalf />
             }
+            {/* <div className="tooltipText">
+                {
+                    ratting
+                }
+            </div> */}
         </div>
     );
 }

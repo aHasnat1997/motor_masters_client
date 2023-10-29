@@ -13,12 +13,28 @@
 }
 
 /* buttons styles */
+.btn {
+    @apply outline-none duration-200 text-xl md:text-2xl font-semibold click-effect
+}
+
 .btn-primary {
-    @apply outline-none duration-200 bg-primary hover:bg-primary-hover text-white text-lg md:text-xl font-semibold rounded-md click-effect
+    @apply btn bg-primary text-white rounded-md
+}
+
+.btn-secondary {
+    @apply btn bg-secondary text-white rounded-md
+}
+
+.btn-outline {
+    @apply btn border rounded-md
 }
 
 .btn-primary-outline {
-    @apply outline-none duration-200 border border-primary hover:bg-primary text-primary hover:text-white text-lg md:text-xl font-semibold rounded-md click-effect
+    @apply btn border border-primary text-primary rounded-md
+}
+
+.btn-secondary-outline {
+    @apply btn border border-secondary text-secondary rounded-md
 }
 
 .btn-outline {
@@ -26,17 +42,79 @@
 }
 
 .btn-slider {
-    @apply outline-none duration-200 bg-gray-700/30 hover:bg-primary text-white text-lg md:text-xl font-semibold rounded-full click-effect
+    @apply btn bg-gray-700/30 text-white rounded-full
 }
 
 .btn-cancel {
-    @apply outline-none duration-200 bg-gray-700 hover:bg-gray-600 text-white text-xl md:text-2xl font-semibold rounded-full click-effect
+    @apply btn bg-gray-700 text-white font-semibold rounded-full
 }
 
 /* Shapes */
 .trapezoid {
     @apply w-full md:w-[50rem] border-solid border-b-[4.5rem] border-b-primary border-x-[2rem] md:border-x-[4rem] border-x-transparent
 }
+
+
+.nav-shape {
+    @apply border-solid border-b-[6rem] border-b-primary border-r-[16rem] border-x-transparent
+}
+
+/* navbar sticky */
+.sticky-nav {
+    @apply fixed right-0 left-0 z-40
+}
+
+/* test class */
+.test {
+    color: #000000ee;
+}
+
+/* Hiding scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hiding scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+/* tooltip */
+/* .tooltipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
+} */
 
 /* test class */
 .test {
