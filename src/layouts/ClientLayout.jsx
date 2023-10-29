@@ -11,6 +11,7 @@ import ProductsCard from "../components/ProductsCard";
 import Banner from "../components/Banner";
 import bannerImg from "../assets/banner/4.jpg";
 import Cart from "../components/Cart";
+import Button from "../components/Button";
 
 export default function ClientLayout() {
     return (
@@ -22,6 +23,13 @@ export default function ClientLayout() {
 
                 <div>
                     <Banner image={bannerImg} title='Service Details' route='Service Details' />
+                </div>
+
+                <div className="max-container my-8 flex items-center justify-center gap-8">
+                    <Button />
+                    <Button btnStyle="btn-primary-outline px-6 py-3 hover:text-white" bgHover="bg-primary" />
+                    <Button btnStyle="btn-secondary-outline px-6 py-3 hover:text-white" bgHover="bg-secondary" />
+                    <Button btnStyle="btn-secondary px-6 py-3 hover:text-black hover:border-secondary" bgHover="bg-white" />
                 </div>
 
                 <div className="max-container my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
