@@ -1,23 +1,20 @@
 import { useEffect, useState } from 'react';
-import banner1 from '../../../assets/banner/1.jpg';
-import banner2 from '../../../assets/banner/2.jpg';
-import banner3 from '../../../assets/banner/3.jpg';
-import banner4 from '../../../assets/banner/4.jpg';
-import banner5 from '../../../assets/banner/5.jpg';
-import banner6 from '../../../assets/banner/6.jpg';
+import banner1 from '../../../assets/homeCarousel/1.jpg';
+import banner2 from '../../../assets/homeCarousel/2.jpg';
+import banner3 from '../../../assets/homeCarousel/3.jpg';
+import banner4 from '../../../assets/homeCarousel/4.jpg';
+import heroOverlay from '../../../assets/hero_overlay.png';
 import Button from '../../../components/Button';
 
 // Images array for background
-const images = [banner1, banner2, banner3, banner4, banner5, banner6];
+const images = [banner1, banner2, banner3, banner4];
 
 // Headings for the Hero
 const headings = [
     'Affordable Price For Car Servicing',
     'Good Customer Service',
     'Best Quality Products',
-    'Good Technicians',
-    'Best Equipment for Proper Servicing',
-    'Honesty and Truthfulness in Service',
+    'Good Technicians'
 ];
 
 /**
@@ -41,7 +38,7 @@ export default function Hero() {
     return (
         <section className='relative h-[92vh] overflow-hidden'>
             <div style={{
-                backgroundImage: `radial-gradient(#0000005b, #000000), url(${images[currentSlide]})`,
+                backgroundImage: `radial-gradient(#0000005b, #000000), url(${heroOverlay}), url(${images[currentSlide]})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
