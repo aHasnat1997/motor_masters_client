@@ -13,6 +13,7 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 import React from 'react';
 import Logo from './Logo';
 import footerBgImg from '../assets/footer.jpg';
+import Button from './Button';
 
 /**
  * Footer component for the website.
@@ -101,26 +102,32 @@ export default function Footer() {
 
     return (
         <footer className='mt-52 relative'>
-            <div className='w-full absolute -top-32'>
-                <div className='max-container w-full px-4 py-10 bg-primary rounded-2xl flex flex-col items-center justify-center gap-6'>
-                    <div className='text-white text-center'>
-                        <h3 className='text-xl'>Subscribe our</h3>
-                        <h1 className='text-5xl font-semibold'>Newsletter</h1>
-                        <h3 className='text-xl'>To get updates</h3>
-                    </div>
-                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-0'>
-                        <input
-                            type="text"
-                            className='w-[95%] outline-none px-6 py-4 text-xl'
-                            placeholder='Enter your email'
-                        />
-                        <button className='btn-outline p-4 text-xl text-white flex items-center gap-4 duration-300 hover:bg-gray-800 hover:border-gray-800'>
-                            Subscribe <BsFillSendFill />
-                        </button>
 
+            {/* Newsletter */}
+
+            <div className='w-full absolute -top-24 z-10 overflow-hidden'>
+                <div className='newsletter-lg' />
+                <div className='w-full absolute top-0'>
+                    <div className='w-[70%] mx-auto px-4 py-10 flex flex-col items-center justify-center gap-6'>
+                        <div className='text-white text-center'>
+                            <h3 className='lg:text-xl'>Subscribe for our</h3>
+                            <h1 className='text-lg lg:text-5xl font-semibold'>Newsletter</h1>
+                        </div>
+                        <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-0'>
+                            <input
+                                type="text"
+                                className='w-full outline-none p-2 lg:px-6 lg:py-4 text-xl'
+                                placeholder='Enter your email'
+                            />
+                            <Button
+                                title='Subscribe'
+                                btnStyle='w-full lg:w-[40%] p-2 lg:p-4 btn-outline text-xl text-white flex items-center gap-4 duration-300 hover:border-gray-800'
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div
                 style={{
                     backgroundImage: `linear-gradient(#000000ee , #000000ee), url(${footerBgImg})`,
@@ -128,12 +135,12 @@ export default function Footer() {
                     backgroundPosition: 'center',
                     backgroundRepeat: 'repeat',
                 }}
-                className='pt-48 lg:pt-36'
+                className='w-full pt-36'
             >
                 <div className='max-container py-16 text-white flex flex-col items-center lg:flex-row lg:items-start lg:justify-between gap-16 lg:gap-32'>
-                    <div className='w-80 flex flex-col items-center gap-12'>
+                    <div className='lg:w-56 flex flex-col items-center gap-12'>
                         <Logo color='white' />
-                        <p className='text-xl'>Motor Masters blandit aliquet elit, eget tincidunt Nibh pulvinar a.</p>
+                        <p className='text-xl text-center lg:text-left'>Motor Masters blandit aliquet elit, eget tincidunt Nibh pulvinar a.</p>
                         <div className='flex items-center gap-8 text-2xl'>
                             <div className='cursor-pointer p-3 bg-white/20 rounded-full duration-200 hover:bg-white/50'>
                                 <BsGoogle />

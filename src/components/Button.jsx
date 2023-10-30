@@ -20,7 +20,7 @@ export default function Button({
         ${bgHover}`} />
         <div className={`w-20 h-60 absolute -bottom-4 -right-24 duration-700 origin-bottom-left opacity-0 group-hover:opacity-100 group-hover:-rotate-90 
         ${bgHover}`} />
-        <div className="relative z-20">
+        <div className="relative z-20 text-center mx-auto">
             {title}
         </div>
     </button>
