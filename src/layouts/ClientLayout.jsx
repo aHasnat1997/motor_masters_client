@@ -18,5 +18,6 @@ export default function ClientLayout() {
                 <Footer />
             </div>
         </main>
+
     );
 }

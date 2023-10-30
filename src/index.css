@@ -56,7 +56,27 @@
 
 
 .nav-shape {
-    @apply border-solid border-b-[6rem] border-b-primary border-r-[16rem] border-x-transparent
+    @apply relative w-full h-full border-solid border-t-[7rem] border-t-primary border-r-[4rem] border-x-transparent
+}
+
+.nav-shape::before {
+    content: '';
+    @apply w-[10%] absolute -top-40 -right-24 z-[-1] border-solid border-b-[6rem] border-b-secondary/70 border-x-transparent border-x-[4rem]
+}
+
+
+.newsletter-lg {
+    @apply relative w-[100%] lg:w-[80%] mx-auto border-solid border-t-[16rem] border-t-primary border-x-[4rem] md:border-x-[10rem] lg:border-x-[16rem] border-x-transparent
+}
+
+.newsletter-lg::after {
+    content: '';
+    @apply w-[400%] md:w-[150%] lg:w-[100%] absolute top-[-16rem] left-[-20rem] z-[-1] border-solid border-b-[6rem] border-b-secondary/70 border-x-transparent border-x-[4rem]
+}
+
+.newsletter-lg::before {
+    content: '';
+    @apply w-[400%] md:w-[150%] lg:w-[100%] absolute top-[-16rem] right-[-20rem] z-[-1] border-solid border-b-[6rem] border-b-secondary/70 border-x-transparent border-x-[4rem]
 }
 
 /* navbar sticky */

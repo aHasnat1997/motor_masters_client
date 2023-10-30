@@ -70,14 +70,14 @@ export default function MainNav() {
     const lgNav = (
         <div className="relative h-full">
             <div className="w-[35%] h-full absolute z-20">
-                <div className="w-full h-full border-solid border-t-[7rem] border-t-primary border-r-[4rem] border-x-transparent" />
+                <div className="nav-shape" />
                 <div className="w-full mt-2 absolute z-20 top-0 flex items-center justify-center bg-transparent">
                     <Logo color='white' width='w-[18rem]' />
                 </div>
             </div>
             <div className="w-full h-full ">
                 <div className="w-full flex items-center">
-                    <div className="w-[36.5%] h-full border-solid border-b-[2.5rem] border-b-primary/70 border-r-[1.5rem] border-x-transparent" />
+                    <div className="w-[36.5%] h-full border-b-[2.5rem] border-b-white" />
                     <div className="w-[63.5%] flex items-center justify-between">
                         <h5>Welcome To Car Repair & Service Center</h5>
                         <div className="mr-[15%] flex items-end gap-6">
