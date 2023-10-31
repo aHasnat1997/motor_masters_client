@@ -16,9 +16,9 @@ export default function Button({
         className={`overflow-hidden relative group ${btnStyle}`}
         {...rest}
     >
-        <div className={`w-20 h-60 absolute -bottom-4 -left-24 duration-700 origin-bottom-right opacity-0 group-hover:opacity-100 group-hover:rotate-90 
+        <div className={`w-32 h-96 absolute -bottom-4 -left-40 duration-700 origin-bottom-right opacity-0 group-hover:opacity-100 group-hover:rotate-90 
         ${bgHover}`} />
-        <div className={`w-20 h-60 absolute -bottom-4 -right-24 duration-700 origin-bottom-left opacity-0 group-hover:opacity-100 group-hover:-rotate-90 
+        <div className={`w-32 h-96 absolute -bottom-4 -right-40 duration-700 origin-bottom-left opacity-0 group-hover:opacity-100 group-hover:-rotate-90 
         ${bgHover}`} />
         <div className="relative z-20 text-center mx-auto">
             {title}

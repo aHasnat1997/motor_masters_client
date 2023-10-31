@@ -56,11 +56,11 @@ export default function Hero() {
                             <div className='flex flex-col md:flex-row items-center gap-2 mt-4'>
                                 <Button
                                     title='Discover More'
-                                    btnStyle='btn-primary px-6 py-4'
+                                    btnStyle='btn-primary px-6 py-4 w-full lg:w-fit'
                                 />
                                 <Button
                                     title='Latest Project'
-                                    btnStyle='btn-outline border-white text-white px-6 py-4 hover:text-black'
+                                    btnStyle='btn-outline border-white text-white px-6 py-4 hover:text-black w-full lg:w-fit'
                                     bgHover='bg-white'
                                 />
                             </div>

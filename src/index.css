@@ -14,27 +14,27 @@
 
 /* buttons styles */
 .btn {
-    @apply outline-none duration-200 text-xl md:text-2xl font-semibold click-effect
+    @apply outline-none duration-200 font-semibold click-effect
 }
 
 .btn-primary {
-    @apply btn bg-primary text-white rounded-md
+    @apply btn bg-primary text-white rounded-md text-xl md:text-2xl
 }
 
 .btn-secondary {
-    @apply btn bg-secondary text-white rounded-md
+    @apply btn bg-secondary text-white rounded-md text-xl md:text-2xl
 }
 
 .btn-outline {
-    @apply btn border rounded-md
+    @apply btn border rounded-md text-xl md:text-2xl
 }
 
 .btn-primary-outline {
-    @apply btn border border-primary text-primary rounded-md
+    @apply btn border border-primary text-primary rounded-md text-xl md:text-2xl
 }
 
 .btn-secondary-outline {
-    @apply btn border border-secondary text-secondary rounded-md
+    @apply btn border border-secondary text-secondary rounded-md text-xl md:text-2xl
 }
 
 .btn-outline {
@@ -42,11 +42,11 @@
 }
 
 .btn-slider {
-    @apply btn bg-gray-700/30 text-white rounded-full
+    @apply btn bg-gray-700/30 text-white rounded-full text-xl md:text-2xl
 }
 
 .btn-cancel {
-    @apply btn bg-gray-700 text-white font-semibold rounded-full
+    @apply btn bg-gray-700 text-white font-semibold rounded-full text-xl md:text-2xl
 }
 
 /* Shapes */
