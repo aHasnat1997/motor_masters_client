@@ -130,7 +130,7 @@ export default function Footer() {
 
             <div
                 style={{
-                    backgroundImage: `linear-gradient(#000000ee , #000000ee), url(${footerBgImg})`,
+                    backgroundImage: `linear-gradient(#000000e3 , #000000e3), url(${footerBgImg})`,
                     backgroundSize: 'contain',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'repeat',

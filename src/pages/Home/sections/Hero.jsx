@@ -38,7 +38,7 @@ export default function Hero() {
     return (
         <section className='relative h-[92vh] overflow-hidden'>
             <div style={{
-                backgroundImage: `radial-gradient(#0000005b, #000000), url(${heroOverlay}), url(${images[currentSlide]})`,
+                backgroundImage: `url(${heroOverlay}) ,radial-gradient(#0000005b, #000000), url(${images[currentSlide]})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
