@@ -1,4 +1,4 @@
-import Title from './Title';
+import Title from '../components/Title';
 import uid from '../../../Utils/uid';
 import { RiTeamLine } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";

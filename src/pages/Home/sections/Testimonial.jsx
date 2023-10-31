@@ -1,6 +1,6 @@
 import uid from "../../../Utils/uid";
 import Ratting from "../../../components/Ratting";
-import Title from "./Title";
+import Title from "../components/Title";
 import { ImQuotesRight } from "react-icons/im";
 
 /**

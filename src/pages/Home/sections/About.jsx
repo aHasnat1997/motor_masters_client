@@ -1,6 +1,6 @@
 import parts from "../../../assets/about_us/parts.jpg";
 import person from "../../../assets/about_us/person.jpg";
-import Title from "./Title";
+import Title from "../components/Title";
 
 /**
  * About Us section for the Home page.

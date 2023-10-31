@@ -1,4 +1,4 @@
-import Title from "./Title";
+import Title from "../components/Title";
 import ServiceCard from "../../../components/ServiceCard";
 import { useSelector } from "react-redux";
 
