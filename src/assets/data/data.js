@@ -144,74 +144,74 @@ export const productData = [
 export const serviceData = [
     {
         id: uid(),
-        title: 'Electrical System',
+        title: 'Car Oil Change',
         image: service1,
-        price: 20
+        price: 20,
+        description: 'Professionally fabricate distributed process improvements and multidisciplinary infomediaries. Energetically generate process-centric core competencies whereas cooperative meta-services. Efficiently leverage others empowered initiatives after competitive synergy. Enthusiastically iterate emerging imperatives through',
+        serviceList: [
+            'We providing full service for car repairing.',
+            'Car repair using three style assets.',
+            'Best material used for serviced properly.'
+        ]
     },
     {
         id: uid(),
-        title: 'Engine Diagnostics',
-        image: service2,
-        price: 25
-    },
-    {
-        id: uid(),
-        title: 'Auto Car Repair',
-        image: service3,
-        price: 50.5
-    },
-    {
-        id: uid(),
-        title: 'Electrical System',
-        image: service4,
-        price: 35.5
-    },
-    {
-        id: uid(),
-        title: 'Engine Diagnostics',
+        title: 'Auto Diagnostics',
         image: service5,
-        price: 35.5
+        price: 25,
+        description: 'Professionally fabricate distributed process improvements and multidisciplinary infomediaries. Energetically generate process-centric core competencies whereas cooperative meta-services. Efficiently leverage others empowered initiatives after competitive synergy. Enthusiastically iterate emerging imperatives through',
+        serviceList: [
+            'We providing full service for car repairing.',
+            'Car repair using three style assets.',
+            'Best material used for serviced properly.'
+        ]
     },
     {
         id: uid(),
-        title: 'Auto Car Repair',
-        image: service6,
-        price: 60
-    },
-    {
-        id: uid(),
-        title: 'Electrical System',
-        image: service1,
-        price: 20
-    },
-    {
-        id: uid(),
-        title: 'Engine Diagnostics',
-        image: service2,
-        price: 25
-    },
-    {
-        id: uid(),
-        title: 'Auto Car Repair',
-        image: service3,
-        price: 50.5
-    },
-    {
-        id: uid(),
-        title: 'Electrical System',
+        title: 'Battery Problem',
         image: service4,
-        price: 35.5
+        price: 50.5,
+        description: 'Professionally fabricate distributed process improvements and multidisciplinary infomediaries. Energetically generate process-centric core competencies whereas cooperative meta-services. Efficiently leverage others empowered initiatives after competitive synergy. Enthusiastically iterate emerging imperatives through',
+        serviceList: [
+            'We providing full service for car repairing.',
+            'Car repair using three style assets.',
+            'Best material used for serviced properly.'
+        ]
     },
     {
         id: uid(),
-        title: 'Engine Diagnostics',
-        image: service5,
-        price: 35.5
+        title: 'Engine Repair',
+        image: service2,
+        price: 35.5,
+        description: 'Professionally fabricate distributed process improvements and multidisciplinary infomediaries. Energetically generate process-centric core competencies whereas cooperative meta-services. Efficiently leverage others empowered initiatives after competitive synergy. Enthusiastically iterate emerging imperatives through',
+        serviceList: [
+            'We providing full service for car repairing.',
+            'Car repair using three style assets.',
+            'Best material used for serviced properly.'
+        ]
     },
     {
         id: uid(),
-        title: 'Auto Car Repair',
+        title: 'Glasses Change',
+        image: service3,
+        price: 35.5,
+        description: 'Professionally fabricate distributed process improvements and multidisciplinary infomediaries. Energetically generate process-centric core competencies whereas cooperative meta-services. Efficiently leverage others empowered initiatives after competitive synergy. Enthusiastically iterate emerging imperatives through',
+        serviceList: [
+            'We providing full service for car repairing.',
+            'Car repair using three style assets.',
+            'Best material used for serviced properly.'
+        ]
+    },
+    {
+        id: uid(),
+        title: 'Filters & Exhaust',
         image: service6,
-        price: 60
+        price: 60,
+        description: 'Professionally fabricate distributed process improvements and multidisciplinary infomediaries. Energetically generate process-centric core competencies whereas cooperative meta-services. Efficiently leverage others empowered initiatives after competitive synergy. Enthusiastically iterate emerging imperatives through',
+        serviceList: [
+            'We providing full service for car repairing.',
+            'Car repair using three style assets.',
+            'Best material used for serviced properly.'
+        ]
     },
 ];

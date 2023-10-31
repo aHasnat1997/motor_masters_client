@@ -1,6 +1,7 @@
-import Title from "./Title";
+import Title from "../components/Title";
 import ProductsCard from "../../../components/ProductsCard";
 import { useSelector } from "react-redux";
+import Button from "../../../components/Button";
 
 /**
  * Products section for the Home page
@@ -23,7 +24,11 @@ export default function Products() {
                     </div>)
                 }
             </div>
-            <button className="mx-auto btn-primary-outline px-8 py-4">More Products</button>
+            <Button
+                title="More Products"
+                btnStyle="mx-auto btn-primary-outline px-8 py-4 hover:text-white"
+                bgHover="bg-primary"
+            />
         </section>
     )
 }

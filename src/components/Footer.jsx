@@ -101,10 +101,8 @@ export default function Footer() {
     };
 
     return (
-        <footer className='mt-52 relative'>
-
+        <footer className='mt-32 relative'>
             {/* Newsletter */}
-
             <div className='w-full absolute -top-24 z-10 overflow-hidden'>
                 <div className='newsletter-lg' />
                 <div className='w-full absolute top-0'>
