@@ -42,7 +42,7 @@
 }
 
 .btn-slider {
-    @apply btn bg-gray-700/30 text-white rounded-full text-xl md:text-2xl
+    @apply btn bg-primary text-white rounded-full text-xl md:text-2xl
 }
 
 .btn-cancel {

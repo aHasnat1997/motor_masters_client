@@ -1,6 +1,6 @@
 import Title from "../components/Title";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TiTick } from "react-icons/ti";
 import roadShape from "../../../assets/services/road_shape.png";
 import icon1 from "../../../assets/services/service_2_1.svg";
@@ -18,6 +18,17 @@ import Button from "../../../components/Button";
 export default function Service() {
     const icons = [icon6, icon2, icon5, icon1, icon3, icon4];
     const [currentService, setCurrentService] = useState(0);
+
+    // Change contents every 5 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentService((prev) => (prev + 1) % icons.length);
+        }, 5000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     // service data from redux
     const serviceData = useSelector(state => state.services.data);

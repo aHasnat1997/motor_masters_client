@@ -24,7 +24,7 @@ const headings = [
 export default function Hero() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Change contents every 5 seconds
+    // Change contents every 6 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % images.length);
