@@ -66,7 +66,11 @@ export default function About() {
     return (
         <section className="max-container flex flex-col-reverse lg:flex-row items-center lg:items-start gap-12">
             <div className="w-full flex flex-col items-start gap-6">
-                <Title subTitle='About Company' mainTitle='We Are Qualified In Every Car Departments' />
+                <Title
+                    subTitle='About Company'
+                    mainTitle='We Are Qualified In Every Car Departments'
+                    subTitleCenter={false}
+                />
                 <div className="w-full my-4 md:my-8">
                     <div className="w-full flex items-center justify-center md:justify-between gap-4">
                         {
@@ -93,7 +97,7 @@ export default function About() {
                                     </div>
                                     <div className="w-full bg-primary/20 rounded-full">
                                         <div
-                                            className='h-4 rounded-full bg-secondary/70 duration-1000'
+                                            className='h-4 rounded-full bg-secondary/80 duration-1000'
                                             style={{ width: `${percentage}%` }}
                                         />
                                     </div>
@@ -118,4 +122,4 @@ export default function About() {
             </div>
         </section>
     );
-}
+};
