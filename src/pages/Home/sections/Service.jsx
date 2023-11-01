@@ -28,7 +28,7 @@ export default function Service() {
         return () => {
             clearInterval(interval);
         };
-    }, []);
+    }, [icons.length]);
 
     // service data from redux
     const serviceData = useSelector(state => state.services.data);
@@ -65,7 +65,7 @@ export default function Service() {
                         </button>)
                     }
                 </div>
-                <div className="w-full flex flex-col md:flex-row gap-8">
+                <div className="w-full flex mt-6 flex-col md:flex-row gap-8">
                     <div className="w-full">
                         <img src={currentServiceData.image} alt="service image" className="w-full md:h-[32rem] rounded-xl" />
                     </div>
@@ -90,4 +90,4 @@ export default function Service() {
             </div>
         </section>
     );
-};
+}

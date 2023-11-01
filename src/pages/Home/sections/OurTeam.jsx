@@ -34,7 +34,7 @@ export default function OurTeam() {
                     subTitleCenter={false}
                 />
                 <p className="lg:text-xl text-gray-500 text-justify">
-                    Monotonically reinter mediate reliable "outside the box" thinking vis-à-vis multimedia base alignment. Intrinsically seize backend schemas vis-à-vis viral e commerce. Dramatically administrate innovative ideas after cross-media users. Rapaciously exploit resource maximizing.
+                    Monotonically reinter mediate reliable outside the box thinking vis-à-vis multimedia base alignment. Intrinsically seize backend schemas vis-à-vis viral e commerce. Dramatically administrate innovative ideas after cross-media users. Rapaciously exploit resource maximizing.
                 </p>
                 <div className="flex items-center gap-6">
                     <Button
