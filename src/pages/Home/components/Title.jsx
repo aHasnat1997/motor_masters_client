@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 /**
  * Title component for Home page
  * @param {String} subTitle - subtitle for the Title component.  
@@ -14,4 +16,10 @@ export default function Title({ subTitle, mainTitle, paragraph, subTitleCenter =
             <p className="lg:w-1/2 text-xl text-gray-500 flex flex-col gap-4 leading-9">{paragraph}</p>
         </div>
     );
+}
+Title.propTypes = {
+    subTitle: PropTypes.string,
+    mainTitle: PropTypes.string,
+    paragraph: PropTypes.string,
+    subTitleCenter: PropTypes.bool
 }
