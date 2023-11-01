@@ -1,4 +1,3 @@
-
 /**
  * Title component for Home page
  * @param {String} subTitle - subtitle for the Title component.  
