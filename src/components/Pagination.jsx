@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 /**
- * Pagination Component * @param {Number} page Current Page Number 
+ * Pagination Component 
+ * @param {Number} page Current Page Number 
  * @param {Function} setPage Set Current Page Number 
  * @param {Number} pageLimit Max Page Number * 
  * @returns Pagination Component 

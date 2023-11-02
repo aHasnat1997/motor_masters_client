@@ -13,6 +13,10 @@ import Button from '../../../components/Button';
 export default function Appointment() {
     const { register, handleSubmit, reset } = useForm();
 
+    /**
+     * Form Data
+     * @param {JSON} data 
+     */
     const onSubmit = (data) => {
         console.log(data);
         reset();
@@ -32,6 +36,8 @@ export default function Appointment() {
                 mainTitle='Make Appointment'
                 subTitleCenter={false}
             />
+
+            {/* to-do: fix service, date and message */}
             <form
                 className='mt-8 flex flex-col gap-6'
                 onSubmit={handleSubmit(onSubmit)}
@@ -57,13 +63,13 @@ export default function Appointment() {
                     </div>
                     <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
                         <label className='text-primary'><MdKeyboardArrowDown /></label>
-                        {/* <input
+                        <input
                             type=""
                             className='outline-none w-full'
                             placeholder='Service Need'
                             {...register("service")}
-                        /> */}
-                        <select
+                        />
+                        {/* <select
                             className='outline-none w-full bg-white'
                             placeholder='Service Need'
                             {...register("service")}
@@ -75,14 +81,14 @@ export default function Appointment() {
                             <option value="Engine Repair">Engine Repair</option>
                             <option value="Glasses Change">Glasses Change</option>
                             <option value="Filters & Exhaust">Engine Repair</option>
-                        </select>
+                        </select> */}
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-row items-center gap-6'>
                     <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
                         <label className='text-primary'><AiOutlineCalendar /></label>
                         <input
-                            type="date"
+                            type="text"
                             className='outline-none w-full'
                             placeholder='Select Date'
                             {...register("date")}
@@ -91,7 +97,7 @@ export default function Appointment() {
                     <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
                         <label className='text-primary'><AiOutlineClockCircle /></label>
                         <input
-                            type="time"
+                            type="text"
                             className='outline-none w-full'
                             placeholder='Select Time'
                             {...register("time")}
