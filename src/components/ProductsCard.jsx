@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Ratting from "./Ratting";
 
 /**
@@ -25,4 +26,10 @@ export default function ProductsCard({ image, title, price, ratting }) {
             </div>
         </div>
     );
+}
+ProductsCard.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    ratting: PropTypes.number
 }

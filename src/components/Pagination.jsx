@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import PropTypes from 'prop-types';
+import { useEffect } from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 /**
  * Pagination Component * @param {Number} page Current Page Number 
- * @param {Number} setPage Set Current Page Number 
+ * @param {Function} setPage Set Current Page Number 
  * @param {Number} pageLimit Max Page Number * 
  * @returns Pagination Component 
  * */
-export default Pagination = ({ page, setPage, pageLimit }) => {
+export default function Pagination({ page, setPage, pageLimit }) {
     const getPageNumbers = () => {
         const pageNumbers = [];
         for (let i = 1; i <= pageLimit; i++) {
@@ -64,4 +65,9 @@ export default Pagination = ({ page, setPage, pageLimit }) => {
                 <AiOutlineArrowRight />
             </button>
         </div>);
-};
+}
+Pagination.propTypes = {
+    page: PropTypes.number,
+    setPage: PropTypes.func,
+    pageLimit: PropTypes.number
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 /**
@@ -7,7 +7,7 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
  * @param {Number} pageLimit Max Page Number * 
  * @returns Carousel Component 
  * */
-export default Carousel = ({ page, setPage, pageLimit }) => {
+export default function Carousel({ page, setPage, pageLimit }) {
     const getPageNumbers = () => {
         const pageNumbers = [];
         for (let i = 1; i <= pageLimit; i++) {
@@ -48,4 +48,9 @@ export default Carousel = ({ page, setPage, pageLimit }) => {
                 <AiOutlineArrowRight />
             </button>
         </div>);
+}
+Carousel.propTypes = {
+    page: PropTypes.number,
+    setPage: PropTypes.number,
+    pageLimit: PropTypes.number
 };

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 /**
  * Banner component represent banner for pages.
  * @param {String} image - banner image.
@@ -27,4 +29,9 @@ export default function Banner({ image, title, route }) {
             </div>
         </div>
     );
+}
+Banner.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    route: PropTypes.string
 }

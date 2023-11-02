@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 /**
  * Button component for this website.
- * @prop {String} title button title.
+ * @prop {*} title button title.
  * @prop {String} btnStyle button style.
  * @prop {String} bgHover button hover background color.
  * @prop {*} rest button rest attributes.
@@ -24,4 +26,9 @@ export default function Button({
             {title}
         </div>
     </button>
+}
+Button.propTypes = {
+    title: PropTypes.any,
+    btnStyle: PropTypes.string,
+    bgHover: PropTypes.string
 }

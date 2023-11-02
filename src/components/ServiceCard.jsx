@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 /**
@@ -38,4 +39,9 @@ export default function ServiceCard({ image, title, price }) {
             </div>
         </div>
     );
+}
+ServiceCard.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number
 }

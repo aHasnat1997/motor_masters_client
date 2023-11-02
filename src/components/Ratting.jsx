@@ -1,5 +1,6 @@
-import { useState } from "react";
+import PropTypes from 'prop-types';
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
+// import { useState } from "react";
 
 /**
  * Ratting component represents ratting stars.
@@ -7,7 +8,7 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
  * @returns {JSX.Element} Ratting stars
  */
 export default function Ratting({ ratting = 0 }) {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
 
     return (
         <div className="relative flex items-center text-2xl gap-6 text-[#FF912C] tooltip">
@@ -26,4 +27,7 @@ export default function Ratting({ ratting = 0 }) {
             </div> */}
         </div>
     );
+}
+Ratting.propTypes = {
+    ratting: PropTypes.number
 }

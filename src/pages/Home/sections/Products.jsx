@@ -18,7 +18,8 @@ export default function Products() {
                     productData.slice(0, 6).map(data => <div key={data.id}>
                         <ProductsCard
                             image={data.image}
-                            title={data.title} price={data.price}
+                            title={data.title}
+                            price={data.price}
                             ratting={data.ratting}
                         />
                     </div>)

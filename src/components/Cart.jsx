@@ -1,7 +1,10 @@
+import PropTypes from 'prop-types';
+
 /**
  * Product and Service cart for the website.
  * @param {String} image - Cart image.
  * @param {String} title - Cart title.
+ * @param {Number} price - Cart price.
  * @param {String} date - Cart order date.
  * @param {String} status - Cart order status.
  * @returns {JSX.Element} Cart component.
@@ -24,3 +27,10 @@ export default function Cart({ image, title, price, date, status }) {
         </div>
     );
 }
+Cart.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    date: PropTypes.string,
+    status: PropTypes.string
+};

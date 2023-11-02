@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import whiteLogo from "../assets/logo-white.png";
@@ -22,4 +23,8 @@ export default function Logo({ color, width }) {
             </Link>
         </div>
     );
+}
+Logo.propTypes = {
+    color: PropTypes.string,
+    width: PropTypes.string
 }

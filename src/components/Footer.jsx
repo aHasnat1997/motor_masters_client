@@ -7,7 +7,6 @@ import {
     BsClock,
     BsTelephone,
     BsEnvelopeAt,
-    BsFillSendFill
 } from "react-icons/bs";
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 import React from 'react';

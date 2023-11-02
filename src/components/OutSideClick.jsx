@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 
 /**
@@ -29,4 +30,9 @@ export function OutSideClick({ onClickOutside, show, body }) {
             {body}
         </div>
     );
+}
+OutSideClick.propTypes = {
+    onClickOutside: PropTypes.func,
+    show: PropTypes.bool,
+    body: PropTypes.object
 }
