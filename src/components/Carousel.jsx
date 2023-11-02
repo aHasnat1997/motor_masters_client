@@ -1,56 +1,35 @@
 import PropTypes from 'prop-types';
-import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import { useEffect } from 'react';
 
 /**
- * Carousel Component * @param {Number} page Current Page Number 
- * @param {Number} setPage Set Current Page Number 
- * @param {Number} pageLimit Max Page Number * 
- * @returns Carousel Component 
+ * Carousel Component 
+ * @param {String} btnRight Right button id.
+ * @param {String} btnLeft Left button id.
+ * @param {JSX.Element} child body of the Carousel.
+ * @returns {JSX.Element} Carousel Component 
  * */
-export default function Carousel({ page, setPage, pageLimit }) {
-    const getPageNumbers = () => {
-        const pageNumbers = [];
-        for (let i = 1; i <= pageLimit; i++) {
-            pageNumbers.push(i);
-        }
-        return pageNumbers;
-    };
+export default function Carousel({ btnRight, btnLeft, children }) {
 
-    const pageNumbers = getPageNumbers();
-    const maxVisibleButtons = 2;
-    const buttonsToShow = [];
-    buttonsToShow.push(...pageNumbers.slice(0, maxVisibleButtons));
+    useEffect(() => {
+        document.getElementById(btnRight).addEventListener('click', () => {
+            document.getElementById('scroll').scrollBy(300, 0);
+        })
+        document.getElementById(btnLeft).addEventListener('click', () => {
+            document.getElementById('scroll').scrollBy(-300, 0);
+        })
+    });
 
     return (
-        <div className="flex items-center gap-1 lg:gap-2">
-            <button
-                className="btn-slider"
-                onClick={() => page > 1 && setPage(page - 1)} >
-                <AiOutlineArrowLeft />
-            </button>
-            {
-                buttonsToShow.map((num, i) => (<div
-                    key={i}
-                >
-                    <button
-                        key={i}
-                        className="h-full w-full"
-                        onClick={() => num !== "..." && setPage(num)}
-                    >
-                        {num}
-                    </button>
-                </div>))
-            }
-            <button
-                className="btn-slider"
-                onClick={() => page < pageLimit && setPage(page + 1)}
-            >
-                <AiOutlineArrowRight />
-            </button>
-        </div>);
+        <div
+            id='scroll'
+            className="w-full h-[25rem] px-2 flex items-center justify-start gap-6 overflow-x-scroll no-scrollbar duration-700 scroll-smooth"
+        >
+            {children}
+        </div>
+    )
 }
 Carousel.propTypes = {
-    page: PropTypes.number,
-    setPage: PropTypes.number,
-    pageLimit: PropTypes.number
+    btnRight: PropTypes.string,
+    btnLeft: PropTypes.string,
+    children: PropTypes.any
 };
