@@ -47,34 +47,40 @@ export default function OurTeam() {
                     />
                 </div>
             </div>
-            <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="w-full flex flex-col md:flex-row items-center justify-center gap-28 md:gap-6">
                 {
                     teamData.map(data => <div
                         key={data.id}
-                        className="overflow-hidden border rounded-xl flex flex-col items-center gap-4 group"
+                        className="relative border flex flex-col items-center gap-4 group"
                     >
                         <div className="overflow-hidden">
-                            <img src={data.image} alt="user-image" className="w-full h-60 duration-500 group-hover:scale-110" />
+                            <img
+                                src={data.image}
+                                alt="user-image"
+                                className="w-full h-60 duration-500 group-hover:scale-110"
+                            />
                         </div>
-                        <div className="text-center">
-                            <h3 className="text-2xl font-semibold">{data.name}</h3>
-                            <p className="text-primary">{data.expert}</p>
-                        </div>
-                        <div className="overflow-hidden relative w-full border-t-2">
-                            <div className="w-full absolute -z-10 h-20 bg-secondary duration-500 origin-bottom scale-y-0 group-hover:scale-y-100" />
-                            <div className=" flex items-center justify-center gap-4 text-2xl py-4 duration-200 group-hover:text-white">
-                                <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
-                                    <FaFacebookF />
-                                </span>
-                                <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
-                                    <FaTwitter />
-                                </span>
-                                <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
-                                    <FaLinkedinIn />
-                                </span>
-                                <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
-                                    <FaInstagram />
-                                </span>
+                        <div className="w-[85%] absolute bottom-[-4.6rem] bg-white shadow-xl">
+                            <div className="text-center py-4">
+                                <h3 className="text-2xl font-semibold">{data.name}</h3>
+                                <p className="text-primary">{data.expert}</p>
+                            </div>
+                            <div className="overflow-hidden relative w-full border-t-2">
+                                <div className="w-full absolute z-10 h-20 bg-secondary duration-500 origin-bottom scale-y-0 group-hover:scale-y-100" />
+                                <div className="flex items-center justify-center gap-4 text-2xl py-4 duration-200 group-hover:text-white relative z-20">
+                                    <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
+                                        <FaFacebookF />
+                                    </span>
+                                    <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
+                                        <FaTwitter />
+                                    </span>
+                                    <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
+                                        <FaLinkedinIn />
+                                    </span>
+                                    <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
+                                        <FaInstagram />
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>)

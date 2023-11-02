@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import appointmentImg from '../../../assets/home/appointment_1.png';
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineEmail, MdKeyboardArrowDown } from "react-icons/md";
-import { AiOutlineMessage } from "react-icons/ai";
+import { AiOutlineMessage, AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
 import Button from '../../../components/Button';
 
 /**
@@ -18,7 +18,7 @@ export default function Appointment() {
         reset();
     }
 
-    return <section className='max-container flex items-center justify-between'>
+    return <section className='max-container flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0'>
         <div className='w-full'>
             <img
                 src={appointmentImg}
@@ -26,7 +26,7 @@ export default function Appointment() {
                 className='w-fill'
             />
         </div>
-        <div className='w-full bg-secondary/10 px-16 py-12 rounded-xl'>
+        <div className='w-full bg-secondary/5 px-2 py-6 md:px-16 md:py-12 rounded-xl'>
             <Title
                 subTitle='Need Our Service'
                 mainTitle='Make Appointment'
@@ -37,7 +37,7 @@ export default function Appointment() {
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
-                    <span className='text-primary'><FaRegUser /></span>
+                    <label className='text-primary'><FaRegUser /></label>
                     <input
                         type="text"
                         className='outline-none w-full'
@@ -45,9 +45,9 @@ export default function Appointment() {
                         {...register("name")}
                     />
                 </div>
-                <div className='flex items-center gap-6'>
+                <div className='flex flex-col md:flex-row items-center gap-6'>
                     <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
-                        <span className='text-primary'><MdOutlineEmail /></span>
+                        <label className='text-primary'><MdOutlineEmail /></label>
                         <input
                             type="email"
                             className='outline-none w-full'
@@ -56,17 +56,31 @@ export default function Appointment() {
                         />
                     </div>
                     <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
-                        <span className='text-primary'><MdKeyboardArrowDown /></span>
-                        <input
-                            type="text"
+                        <label className='text-primary'><MdKeyboardArrowDown /></label>
+                        {/* <input
+                            type=""
                             className='outline-none w-full'
                             placeholder='Service Need'
                             {...register("service")}
-                        />
+                        /> */}
+                        <select
+                            className='outline-none w-full bg-white'
+                            placeholder='Service Need'
+                            {...register("service")}
+                        >
+                            <option className='text-gray-500'>Service Need</option>
+                            <option value="Car Oil Change">Car Oil Change</option>
+                            <option value="Auto Diagnostics">Auto Diagnostics</option>
+                            <option value="Battery Problem">Battery Problem</option>
+                            <option value="Engine Repair">Engine Repair</option>
+                            <option value="Glasses Change">Glasses Change</option>
+                            <option value="Filters & Exhaust">Engine Repair</option>
+                        </select>
                     </div>
                 </div>
-                <div className='flex items-center gap-6'>
+                <div className='flex flex-col md:flex-row items-center gap-6'>
                     <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
+                        <label className='text-primary'><AiOutlineCalendar /></label>
                         <input
                             type="date"
                             className='outline-none w-full'
@@ -75,6 +89,7 @@ export default function Appointment() {
                         />
                     </div>
                     <div className='w-full p-4 bg-white text-xl flex items-center gap-4 rounded-xl'>
+                        <label className='text-primary'><AiOutlineClockCircle /></label>
                         <input
                             type="time"
                             className='outline-none w-full'
@@ -84,10 +99,10 @@ export default function Appointment() {
                     </div>
                 </div>
                 <div className='w-full p-4 bg-white text-xl flex items-start gap-4 rounded-xl'>
-                    <span className='text-primary mt-1'><AiOutlineMessage /></span>
+                    <label className='text-primary mt-1'><AiOutlineMessage /></label>
                     <textarea
                         type="text"
-                        className='outline-none w-full h-40'
+                        className='outline-none w-full max-h-32 h-32'
                         placeholder='Message'
                         {...register("message")}
                     />
