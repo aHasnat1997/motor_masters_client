@@ -75,12 +75,12 @@ export default function OurTeam() {
 
             <div
                 id='scroll'
-                className="w-full h-[25rem] px-2 flex items-center justify-start gap-6 overflow-x-scroll no-scrollbar duration-700 scroll-smooth"
+                className="w-full h-[25rem] md:h-[30rem] px-2 flex items-center justify-start gap-6 overflow-x-scroll no-scrollbar duration-700 scroll-smooth"
             >
                 {
                     teamData.map(data => <div
                         key={data.id}
-                        className="w-fit h-full mt-8 flex-1 flex flex-col items-center gap-4 group"
+                        className="w-fit flex-1 flex flex-col items-center gap-4 group"
                     >
                         <div className="w-60 md:w-[21.5rem] overflow-hidden">
                             <img
@@ -96,7 +96,7 @@ export default function OurTeam() {
                             </div>
                             <div className="overflow-hidden relative w-full border-t border-secondary/30">
                                 <div className="w-full absolute z-10 h-20 bg-secondary duration-500 origin-bottom scale-y-0 group-hover:scale-y-100" />
-                                <div className="flex items-center justify-center gap-4 text-2xl py-4 duration-200 group-hover:text-white relative z-20">
+                                <div className="flex items-center justify-center gap-4 text-base md:text-2xl py-4 duration-200 group-hover:text-white relative z-20">
                                     <span className="cursor-pointer bg-secondary/10 rounded-full p-2 duration-500 hover:bg-primary">
                                         <FaFacebookF />
                                     </span>
